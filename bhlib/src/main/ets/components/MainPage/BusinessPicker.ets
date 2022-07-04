@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import { Business } from './Business';
+import { Business } from './BusinessModel';
 import { BusinessDayAndTime } from './BusinessDayAndTime';
 
 @Component

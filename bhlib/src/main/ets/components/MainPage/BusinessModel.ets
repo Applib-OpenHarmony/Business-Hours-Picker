@@ -15,53 +15,17 @@
  */
 
 export class Business {
-  private workingDays: boolean[]
-  private from: string[]
-  private to: string[]
-  static dayArr: string[]
-  private static arr12: string []
-  private static arr24: string []
+  private workingDays: boolean[] = [false, false, false, false, false, false, false];
+  private from: string[] = ["", "", "", "", "", "", ""]
+  private to: string[] = ["", "", "", "", "", "", ""]
+  static dayArr: string[] = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+
   constructor(business?: Business) {
     if (business) {
       this.workingDays = business.workingDays
       this.from = business.from
       this.to = business.to
     }
-  }
-
-  static setArr12 = (arr: string[]): void => {
-    Business.arr12 = arr
-  }
-
-  static setArr24 = (arr: string[]): void => {
-    Business.arr24 = arr
-  }
-
-  static getArr12 = (): string[] => {
-    return Business.arr12
-  }
-  static getArr24 = (): string [] => {
-    return Business.arr24
-  }
-
-  setFromArray = (): Business => {
-    this.from = ["", "", "", "", "", "", ""]
-    return this
-  }
-
-  setToArray = (): Business => {
-    this.to = ["", "", "", "", "", "", ""]
-    return this
-  }
-
-  setDayArr = (arr: string[]): Business => {
-    Business.dayArr = arr
-    return this
-  }
-
-  setWorkingDays = (arr: boolean[]): Business => {
-    this.workingDays = arr
-    return this
   }
 
   setWorkingDay = (day: number, v: boolean): void => {

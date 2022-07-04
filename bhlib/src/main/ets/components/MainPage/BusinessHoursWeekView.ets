@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import { Business } from './Business';
+import { Business } from './BusinessModel';
 
 @Component
 export struct BusinessHoursWeekView {
@@ -71,7 +71,7 @@ export struct BusinessHoursWeekView {
       return this.bhTodayColor
     }
   }
-  getImage = (bus: Business, dayInd :number): Resource => {
+  getImage = (bus: Business, dayInd): Resource => {
     if (dayInd != this.isToday) {
       return this.bhIcon
     }
