@@ -9,6 +9,10 @@ For using bhlib in your app, add the below dependency in the entry/package.json
     "@ohos/bhlib": "file:../bhlib"
   }
 ```
+Add dependency command with
+```
+npm i @ohos/bhlib
+```
 ## Usage instructions
 ****
 Import all components at once

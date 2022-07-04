@@ -71,7 +71,7 @@ export struct BusinessHoursWeekView {
       return this.bhTodayColor
     }
   }
-  getImage = (bus: Business, dayInd): Resource => {
+  getImage = (bus: Business, dayInd :number): Resource => {
     if (dayInd != this.isToday) {
       return this.bhIcon
     }
