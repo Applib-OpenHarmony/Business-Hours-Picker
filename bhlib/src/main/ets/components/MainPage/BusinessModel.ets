@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-export class Business {
+export class BusinessModel {
   private workingDays: boolean[] = [false, false, false, false, false, false, false];
   private from: string[] = ["", "", "", "", "", "", ""]
   private to: string[] = ["", "", "", "", "", "", ""]
   static dayArr: string[] = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 
-  constructor(business?: Business) {
+  constructor(business?: BusinessModel) {
     if (business) {
       this.workingDays = business.workingDays
       this.from = business.from
@@ -56,7 +56,7 @@ export class Business {
     for (var i: number = 0;i < 7; i++) {
       if (working[i] == true) {
         if (this.getFromTime(i + 1) === "") {
-          message = "Set the from and to time properly for the day: " + Business.dayArr[i]
+          message = "Set the from and to time properly for the day: " + BusinessModel.dayArr[i]
           done = false
           break
         }

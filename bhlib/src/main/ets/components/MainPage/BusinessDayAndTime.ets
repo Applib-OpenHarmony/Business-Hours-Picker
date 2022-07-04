@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import { Business } from './BusinessModel';
+import { BusinessModel } from './BusinessModel';
 
 @CustomDialog
 export struct TimeSelectorDialog {
@@ -122,7 +122,7 @@ export struct BusinessDayAndTime {
   bhTextStyle: string = 'calibri'
   private day: string = "";
   @State toggle: boolean = false
-  @Link business: Business
+  @Link business: BusinessModel
   temp: Resource = $r('app.media.drop')
 
   build() {

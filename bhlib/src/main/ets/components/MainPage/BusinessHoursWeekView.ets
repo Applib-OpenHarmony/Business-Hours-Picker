@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-import { Business } from './BusinessModel';
+import { BusinessModel } from './BusinessModel';
 
 @Component
 export struct BusinessHoursWeekView {
-  private showBusinessModel: Business = undefined
+  private showBusinessModel: BusinessModel = undefined
   isToday = new Date().getDay()
   bhIcon: Resource = $r('app.media.calendar')
   bhIconPadding: number = 10
@@ -31,10 +31,10 @@ export struct BusinessHoursWeekView {
   bhTodayIcon: Resource = $r('app.media.unlock')
 
   aboutToAppear() {
-    this.showBusinessModel = new Business(this.showBusinessModel)
+    this.showBusinessModel = new BusinessModel(this.showBusinessModel)
   }
 
-  isWorking = (business: Business, dayInd: number): boolean => {
+  isWorking = (business: BusinessModel, dayInd: number): boolean => {
     if (business.getFromTime(dayInd) == "" && !business.isWorkingDay(dayInd)) {
       return false;
     }
@@ -56,7 +56,7 @@ export struct BusinessHoursWeekView {
       return this.bhTodayTextSize
     }
   }
-  getText = (business: Business, dayInd: number): string => {
+  getText = (business: BusinessModel, dayInd: number): string => {
     var a: string = ""
     if (!(business.getFromTime(dayInd) == "" && !business.isWorkingDay(dayInd))) {
       a = business.getFromTime(dayInd) + " - " + business.getToTime(dayInd)
@@ -71,7 +71,7 @@ export struct BusinessHoursWeekView {
       return this.bhTodayColor
     }
   }
-  getImage = (bus: Business, dayInd): Resource => {
+  getImage = (bus: BusinessModel, dayInd): Resource => {
     if (dayInd != this.isToday) {
       return this.bhIcon
     }
@@ -80,7 +80,7 @@ export struct BusinessHoursWeekView {
     }
   }
   arr: number[] = [0, 1, 2, 3, 4, 5, 6]
-  dayArr: string[] = Business.dayArr
+  dayArr: string[] = BusinessModel.dayArr
 
   build() {
     Column({ space: 10 }) {

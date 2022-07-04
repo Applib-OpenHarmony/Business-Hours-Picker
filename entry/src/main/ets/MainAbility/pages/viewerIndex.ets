@@ -14,14 +14,14 @@
  * limitations under the License.
  */
  
-import { BusinessHoursWeekView, Business } from '@ohos/bhlib'
+import { BusinessHoursWeekView, BusinessModel } from '@ohos/bhlib'
 import router from '@system.router';
 
 @Component
 @Preview
 @Entry
 struct ViewerIndex {
-  finalBusinessModel: Business = <Business> router.getParams().finalBusinessModel;
+  finalBusinessModel: BusinessModel = <BusinessModel> router.getParams().finalBusinessModel;
 
   build() {
     Flex({ justifyContent: FlexAlign.Center, alignItems: ItemAlign.Center }) {

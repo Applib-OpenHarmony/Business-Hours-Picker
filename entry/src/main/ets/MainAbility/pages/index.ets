@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-import { Business, BusinessPicker } from '@ohos/bhlib'
+import { BusinessModel, BusinessPicker } from '@ohos/bhlib'
 import prompt from '@system.prompt';
 import router from '@system.router';
 
 @Entry
 @Component
 struct Index {
-  @State finalBusinessModel: Business  = new Business()
+  @State finalBusinessModel: BusinessModel  = new BusinessModel()
   scroller: Scroller = new Scroller();
 
   build() {

@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-import { Business } from './BusinessModel';
+import { BusinessModel } from './BusinessModel';
 import { BusinessDayAndTime } from './BusinessDayAndTime';
 
 @Component
 export struct BusinessPicker {
-  @Link selectedBusinessModel: Business
-  day: string [] = Business.dayArr
+  @Link selectedBusinessModel: BusinessModel
+  day: string [] = BusinessModel.dayArr
   arr: number[] = [0, 1, 2, 3, 4, 5, 6]
   bhTextColor: string = '#000000'
   bhTextSize: number = 20

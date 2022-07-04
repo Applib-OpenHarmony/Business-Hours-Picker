@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-export { Business } from './src/main/ets/components/MainPage/BusinessModel'
+export { BusinessModel } from './src/main/ets/components/MainPage/BusinessModel'
 
 export { BusinessDayAndTime } from './src/main/ets/components/MainPage/BusinessDayAndTime'
 
