@@ -33,7 +33,6 @@ export struct BusinessHoursWeekView {
   arr: number[] = [0, 1, 2, 3, 4, 5, 6]
   dayArr: string[] = BusinessModel.dayArr
 
-  
   aboutToAppear() {
     this.showBusinessModel = new BusinessModel(this.showBusinessModel)
     if (this.businessHoursWeekViewModel == null) {
@@ -107,7 +106,6 @@ export struct BusinessHoursWeekView {
       return this.bhTodayIcon
     }
   }
-
 
   build() {
     Column({ space: 10 }) {

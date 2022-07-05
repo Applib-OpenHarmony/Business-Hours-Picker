@@ -77,9 +77,6 @@ export class BusinessModel {
   }
 
   isValid = (working: boolean[]): any => {
-    if (working.length != 7){
-      return {}
-    }
     var done = true;
     var message: string = ""
     for (var i: number = 0;i < 7; i++) {

@@ -37,7 +37,6 @@ export struct BusinessPicker {
         this.bhTextStyle,
         this.bhFormat,
         this.bhTodayColor,
-        this.selectedBusinessModel
       )
     }
     this.bhTextColor = this.businessPickerModel.bhTextColor
@@ -45,7 +44,6 @@ export struct BusinessPicker {
     this.bhTextStyle = this.businessPickerModel.bhTextStyle
     this.bhFormat = this.businessPickerModel.bhFormat
     this.bhTodayColor = this.businessPickerModel.bhTodayColor
-    this.selectedBusinessModel = this.businessPickerModel.selectedBusinessModel
   }
 
   build() {
@@ -74,7 +72,6 @@ class BusinessPickerModel {
   bhTodayColor: ResourceColor = '#4e754d'
   bhTextSize: number = 20
   bhTextStyle: string = 'calibri'
-  selectedBusinessModel: BusinessModel = null
 
   constructor(
     bhTextColor?: ResourceColor,
@@ -82,18 +79,11 @@ class BusinessPickerModel {
     bhTextStyle?: string,
     bhFormat?: number,
     bhTodayColor?: ResourceColor,
-    selectedBusinessModel?: BusinessModel
   ) {
     if (bhTextColor && (bhTextColor != null)) this.bhTextColor = bhTextColor
     if (bhTextSize) this.bhTextSize = bhTextSize
     if (bhTextStyle && (bhTextStyle != null) && bhTextStyle.length > 0) this.bhTextStyle = bhTextStyle
     if (bhFormat) this.bhFormat = bhFormat
     if (bhTodayColor && (bhTodayColor != null))  this.bhTodayColor = bhTodayColor
-    if (selectedBusinessModel && (selectedBusinessModel != null)) {
-      this.selectedBusinessModel = selectedBusinessModel
-    }
-    else {
-      this.selectedBusinessModel = new BusinessModel()
-    }
   }
 }

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
- 
+
 import { BusinessHoursWeekView, BusinessModel } from '@ohos/bhlib'
 import router from '@system.router';
 
