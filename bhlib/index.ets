@@ -21,3 +21,5 @@ export { BusinessDayAndTime } from './src/main/ets/components/MainPage/BusinessD
 export { BusinessPicker } from './src/main/ets/components/MainPage/BusinessPicker'
 
 export { BusinessHoursWeekView } from './src/main/ets/components/MainPage/BusinessHoursWeekView'
+
+export { a12, a24 } from './src/main/ets/components/MainPage/values'

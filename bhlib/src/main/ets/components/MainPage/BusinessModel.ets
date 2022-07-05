@@ -29,28 +29,57 @@ export class BusinessModel {
   }
 
   setWorkingDay = (day: number, v: boolean): void => {
-    this.workingDays[day - 1] = v;
+    if (day == null || v == null) {
+      return
+    }
+    if (day <= 7 && day >= 1) {
+      this.workingDays[day - 1] = v;
+    }
   }
   setFromTime = (day: number, fromTime: string): void => {
-    this.from[day - 1] = fromTime;
+    if (day == null || fromTime == null) {
+      return
+    }
+    if (day <= 7 && day >= 1) {
+      this.from[day - 1] = fromTime;
+    }
   }
   setToTime = (day: number, toTime: string): void => {
-    this.to[day - 1] = toTime;
+    if (day == null || toTime == null) {
+      return
+    }
+    if (day <= 7 && day >= 1) {
+      this.to[day - 1] = toTime;
+    }
   }
   isWorkingDay = (day: number): boolean => {
-    return this.workingDays[day - 1];
+    if (day <= 7 && day >= 1) {
+      return this.workingDays[day - 1];
+    }
+    else {
+      return false
+    }
   }
   getWorkingDays = (): boolean[] => {
     return this.workingDays;
   }
   getFromTime = (day: number): string => {
-    return this.from[day - 1];
+    if (day <= 7 && day >= 1) {
+      return this.from[day - 1];
+    }
+    return ""
   }
   getToTime = (day: number): string => {
-    return this.to[day - 1];
+    if (day <= 7 && day >= 1) {
+      return this.to[day - 1];
+    }
+    return ""
   }
 
   isValid = (working: boolean[]): any => {
+    if (working.length != 7){
+      return {}
+    }
     var done = true;
     var message: string = ""
     for (var i: number = 0;i < 7; i++) {
