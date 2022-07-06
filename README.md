@@ -76,7 +76,7 @@ You can style the viewer  using theses attributes :
 | bhFormat |12 or 24 hours format|
 ## Compatibility
 ****
-Supports OpenHarmony API version 8
+Supports OpenHarmony API version 9
 ## Code Contribution
 ****
 If you find any problems during usage, you can submit an [issue](https://github.com/satvikshubham/BusinessHoursPicker/issues/new/choose) to us. Of course, we also welcome you to send us PR.
