@@ -33,7 +33,7 @@ struct Index {
             bhTextColor: '#000000',
             bhTextSize: 20,
             bhTextStyle: 'calibri',
-            bhFormat: 12,
+            bhFormat: 24,
             bhTodayColor: '#2c3a4f'
           })
         }

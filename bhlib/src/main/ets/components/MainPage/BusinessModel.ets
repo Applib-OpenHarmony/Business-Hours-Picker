@@ -82,7 +82,7 @@ export class BusinessModel {
     for (var i: number = 0;i < 7; i++) {
       if (working[i] == true) {
         if (this.getFromTime(i + 1) === "") {
-          message = "Set the from and to time properly for the day: " + BusinessModel.dayArr[i]
+          message = "Set the from and to time properly\nfor the day: " + BusinessModel.dayArr[i]
           done = false
           break
         }

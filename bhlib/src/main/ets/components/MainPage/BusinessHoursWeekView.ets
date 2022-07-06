@@ -124,7 +124,6 @@ export struct BusinessHoursWeekView {
         }
       )
     }.padding(20).backgroundColor(0xFFFFFF)
-    .justifyContent(FlexAlign.Center)
   }
 }
 
