@@ -41,7 +41,9 @@ export struct TimeSelectorDialog {
                 .textAlign(TextAlign.Center)
                 .backgroundColor(0xFFFFFF)
                 .onClick(() => {
-                  this.callback(item, this.where, this.dayInd)
+                  if (this.callback && this.callback != null) {
+                    this.callback(item, this.where, this.dayInd)
+                  }
                   this.controller.close()
                 })
             }
@@ -123,12 +125,6 @@ export struct BusinessDayAndTime {
   })
 
   callback(selIndex: string, what: string, dayInd: number) {
-    if (selIndex == null || what == null || dayInd == null){
-      return
-    }
-    if (selIndex == undefined || what == undefined || dayInd == undefined){
-      return
-    }
     if (what === "from") {
       this.fTime = selIndex
       this.businessModel.setFromTime(dayInd, this.fTime)
