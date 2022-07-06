@@ -123,6 +123,12 @@ export struct BusinessDayAndTime {
   })
 
   callback(selIndex: string, what: string, dayInd: number) {
+    if (selIndex == null || what == null || dayInd == null){
+      return
+    }
+    if (selIndex == undefined || what == undefined || dayInd == undefined){
+      return
+    }
     if (what === "from") {
       this.fTime = selIndex
       this.businessModel.setFromTime(dayInd, this.fTime)
