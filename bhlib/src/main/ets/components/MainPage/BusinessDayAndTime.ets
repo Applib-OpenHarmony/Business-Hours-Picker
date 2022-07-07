@@ -35,9 +35,9 @@ export struct TimeSelectorDialog {
           ForEach(this.arr24, (item) => {
             ListItem() {
               Text(item)
-                .fontSize(16)
+                .fontSize('16fp')
                 .width('100%')
-                .padding(10)
+                .padding('10vp')
                 .textAlign(TextAlign.Center)
                 .backgroundColor(0xFFFFFF)
                 .onClick(() => {
@@ -53,9 +53,9 @@ export struct TimeSelectorDialog {
           ForEach(this.arr12, (item) => {
             ListItem() {
               Text(item)
-                .fontSize(16)
+                .fontSize('16fp')
                 .width('100%')
-                .padding(10)
+                .padding('10vp')
                 .textAlign(TextAlign.Center)
                 .backgroundColor(0xFFFFFF)
                 .onClick(() => {
@@ -67,10 +67,10 @@ export struct TimeSelectorDialog {
         }
       }
       .listDirection(Axis.Vertical)
-      .divider({ strokeWidth: 2, color: 0xd5d9de })
+      .divider({ strokeWidth: '2vp', color: 0xd5d9de })
       .edgeEffect(EdgeEffect.Spring)
     }.height('60%').width('50%')
-    .borderRadius(20)
+    .borderRadius('20vp')
   }
 }
 
@@ -88,7 +88,7 @@ export struct BusinessDayAndTime {
   bhFormat: number = 24
   bhTextColor: ResourceColor = '#000000'
   bhTodayColor: ResourceColor = '#4e754d'
-  bhTextSize: number = 20
+  bhTextSize: number | string | Resource = '20fp'
   bhTextStyle: string = 'calibri'
   temp: Resource = $r('app.media.drop')
 
@@ -155,19 +155,19 @@ export struct BusinessDayAndTime {
               this.businessModel.setWorkingDay(this.dayIndex, false)
             }
           })
-      }.height(40)
+      }.height('40vp')
 
       if (this.businessModel.isWorkingDay(this.dayIndex)) {
         Flex({ justifyContent: FlexAlign.SpaceBetween, alignItems: ItemAlign.Center }) {
           Column() {
             Flex({ justifyContent: FlexAlign.SpaceBetween }) {
               Text(this.fTime).fontSize(this.bhTextSize).fontColor(this.bhTextColor).fontFamily(this.bhTextStyle)
-              Image(this.temp).height(20).width(20)
+              Image(this.temp).height('20vp').width('20vp')
             }.onClick(() => {
               this.where = "from"
               this.dialogController.open()
             })
-          }.padding({ right: 5 })
+          }.padding({ right: '5vp' })
 
           Column() {
             Flex({ justifyContent: FlexAlign.SpaceBetween }) {
@@ -175,19 +175,19 @@ export struct BusinessDayAndTime {
                 .fontSize(this.bhTextSize)
                 .fontColor(this.bhTextColor)
                 .fontFamily(this.bhTextStyle)
-                .margin({ left: 5 })
-              Image(this.temp).height(20).width(20)
+                .margin({ left: '5vp' })
+              Image(this.temp).height('20vp').width('20vp')
             }.onClick(() => {
               this.where = "to"
               this.dialogController.open()
             })
           }
-        }.padding({ top: 20, right: 20 })
+        }.padding({ top: '20vp', right: '20vp' })
 
         Flex({ justifyContent: FlexAlign.SpaceBetween }) {
-          Divider().width(120).strokeWidth(1.2)
-          Divider().width(120).margin({ right: 30 }).strokeWidth(1.2)
-        }.padding({ bottom: 20 })
+          Divider().width('120vp').strokeWidth('1.2vp')
+          Divider().width('120vp').margin({ right: '30vp' }).strokeWidth('1.2vp')
+        }.padding({ bottom: '20vp' })
       }
     }
   }
@@ -198,7 +198,7 @@ class BusinessDayAndTimeModel {
   dayIndex: number = 0;
   bhTextColor: ResourceColor = '#000000'
   bhTodayColor: ResourceColor = '#4e754d'
-  bhTextSize: number = 20
+  bhTextSize: number | string | Resource = '20fp'
   bhTextStyle: string = 'calibri'
   day: string = ""
   businessModel: BusinessModel = null
@@ -207,10 +207,10 @@ class BusinessDayAndTimeModel {
               dayIndex?: number,
               bhTextColor?: ResourceColor,
               bhTodayColor?: ResourceColor,
-              bhTextSize?: number,
+              bhTextSize?: number | string | Resource,
               bhTextStyle?: string,
               day?: string,
-              businessModel?: BusinessModel) {
+              ) {
     if (bhFormat) this.bhFormat = bhFormat
     if (dayIndex) this.dayIndex = dayIndex
     if (bhTextColor && (bhTextColor != null)) this.dayIndex = dayIndex

@@ -24,7 +24,7 @@ export struct BusinessPicker {
   day: string [] = BusinessModel.dayArr
   arr: number[] = [0, 1, 2, 3, 4, 5, 6]
   bhTextColor: ResourceColor = '#000000'
-  bhTextSize: number = 20
+  bhTextSize: number | string | Resource = '20fp'
   bhTextStyle: string = 'calibri'
   bhFormat: number = 24
   bhTodayColor: ResourceColor = '#4e754d'
@@ -62,7 +62,7 @@ export struct BusinessPicker {
           })
         }
       )
-    }.padding(20)
+    }.padding('20vp')
   }
 }
 
@@ -70,12 +70,12 @@ class BusinessPickerModel {
   bhFormat: number = 24
   bhTextColor: ResourceColor = '#000000'
   bhTodayColor: ResourceColor = '#4e754d'
-  bhTextSize: number = 20
+  bhTextSize: number | string | Resource = '20fp'
   bhTextStyle: string = 'calibri'
 
   constructor(
     bhTextColor?: ResourceColor,
-    bhTextSize?: number,
+    bhTextSize?: number | string | Resource,
     bhTextStyle?: string,
     bhFormat?: number,
     bhTodayColor?: ResourceColor,

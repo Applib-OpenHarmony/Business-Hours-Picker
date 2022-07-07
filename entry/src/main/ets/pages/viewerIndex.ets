@@ -28,13 +28,13 @@ struct ViewerIndex {
       BusinessHoursWeekView({
         showBusinessModel: this.finalBusinessModel,
         bhIcon: $r('app.media.calendar'),
-        bhIconPadding: 10,
+        bhIconPadding: '10vp',
         bhTextColor: '#000000',
-        bhTextSize: 20,
+        bhTextSize: '20fp',
         bhTextStyle: 'calibri',
         bhTodayColor: '#4e754d',
         bhTodayStyle: 'calibri',
-        bhTodayTextSize: 22,
+        bhTodayTextSize: '22fp',
         bhTodayIcon: $r('app.media.unlock')
       })
     }.backgroundColor(0xebebeb).width('100%').height('100%')

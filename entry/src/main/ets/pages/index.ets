@@ -31,7 +31,7 @@ struct Index {
           BusinessPicker({
             selectedBusinessModel: $finalBusinessModel,
             bhTextColor: '#000000',
-            bhTextSize: 20,
+            bhTextSize: '20fp',
             bhTextStyle: 'calibri',
             bhFormat: 24,
             bhTodayColor: '#2c3a4f'
@@ -62,7 +62,7 @@ struct Index {
                 })
               }
             }).width('50%')
-        }.padding({ left: 20, right: 20, bottom: 40 })
+        }.padding({ left: '20vp', right: '20vp', bottom: '40vp' })
       }
     }
   }
